@@ -1,9 +1,9 @@
 import "./style.css";
-import "./task-1";
-import "./task-2";
-import "./task-3";
-import "./task-4";
-import "./task-5";
-import "./task-6";
-import "./task-7";
-import "./task-8";
+import "./task-1.ts";
+import "./task-2.ts";
+import "./task-3.ts";
+import "./task-4.ts";
+import "./task-5.ts";
+import "./task-6.ts";
+import "./task-7.ts";
+import "./task-8.ts";

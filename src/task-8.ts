@@ -1,11 +1,17 @@
-// Задача 4. Функції (файл task-4.ts)
-function printUserInfo(name: string, age: number, email?: string): void {
-  console.log("Name:", name);
-  console.log("Age:", age);
-  if (email) {
-    console.log("Email:", email);
-  }
+//
+import axios from "axios";
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+}
+async function fetchPosts(): Promise<Post[]> {
+  const response = await axios.get<Post[]>(
+    "https://jsonplaceholder.typicode.com/posts",
+  );
+  return response.data;
 }
 
-printUserInfo("Alice", 30);
-printUserInfo("Bob", 25, "bob@mail.com");
+fetchPosts().then((posts) => {
+  console.log(posts[0].title);
+});
